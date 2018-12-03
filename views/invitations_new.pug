@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Invitations
+  form(action="/invitacion")
+    label(for="title") Titulo:
+    input#title(type="text")
+    label(for="text") Text:
+    textarea#text(name="textarea", cols="30", rows="10")
