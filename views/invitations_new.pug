@@ -1,9 +1,35 @@
 extends layout
 
 block content
-  h1 Invitations
+  h1 Invita con Cage
+
   form(action="/invitacion")
-    label(for="title") Titulo:
-    input#title(type="text")
-    label(for="text") Text:
-    textarea#text(name="textarea", cols="30", rows="10")
+    
+    .form-row
+      label(for="title") Titulo:
+      input#title(type="text", name="title")
+    
+    .form-row
+      p Selecciona a tu nicolas
+      .pictures-row
+        .picture-field
+          label(for="nicolas_01")
+            img(src="pictures/nicolas_princess_01.gif", alt="first picture")
+            input#nicolas_01(type="radio", name='picture', value='nicolas_princess_01.gif')
+
+        .picture-field
+          label(for="nicolas_02")
+            img(src="pictures/nicolas_princess_02.gif", alt="first picture")
+            input#nicolas_02(type="radio", name='picture', value='nicolas_princess_02.gif')
+
+        .picture-field
+          label(for="nicolas_03")
+            img(src="pictures/nicolas_princess_03.gif", alt="first picture")
+            input#nicolas_03(type="radio", name='picture', value='nicolas_princess_03.gif')
+      
+    .form-row
+      label(for="text") Text:
+      textarea#text(name="text", rows="2")
+
+    .actions
+      button(type="submit") Submit
