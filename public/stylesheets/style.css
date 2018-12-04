@@ -1,7 +1,23 @@
+/* https://jgthms.com/web-design-in-4-minutes */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
 body {
   margin: 0 auto;
   max-width: 50em;
-  font-family: "Helvetica", "Arial", sans-serif;
+  /* font-family: "Helvetica", "Arial", sans-serif; */
+  /* color: #555; */
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #566b78;
+}
+
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+a {
+  color: #e81c4f;
 }
 
 body {
@@ -56,9 +72,10 @@ button {
   padding: .5rem 1rem;
   font-size: 1.5rem;
   background: white;
-  border: 1px solid black;
+  border: 1px solid #566b78;
+  color: #566b78;
 }
 
 button:hover {
-  background: gray;
+  background: lightgrey;
 }

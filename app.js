@@ -2,6 +2,8 @@ const express = require('express');
 const logger = require('morgan');
 const http = require('http');
 const path = require('path');
+const bodyParser = require('body-parser');
+
 const routes = require('./routes')
 
 const DEFAULT_PORT = 3000;
@@ -14,6 +16,7 @@ app.set('view engine', 'pug')
 
 app.use(express.static(STATIC_FOLDER));
 app.use(logger('dev'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', routes);
 
