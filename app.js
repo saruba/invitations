@@ -2,7 +2,6 @@ const express = require('express');
 const logger = require('morgan');
 const http = require('http');
 const path = require('path');
-const bodyParser = require('body-parser');
 const i18n = require('i18n');
 
 const routes = require('./routes')
@@ -18,7 +17,7 @@ app.set('view engine', 'pug')
 
 app.use(express.static(STATIC_FOLDER));
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 i18n.configure({
   locales:['en', 'es', 'ca'],
