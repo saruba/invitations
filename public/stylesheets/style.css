@@ -69,6 +69,11 @@ img {
   padding: .5em;
 }
 
+.picture-field input {
+  width: auto;
+  margin: auto;
+}
+
 .form-row {
   width: 100%;
   margin: 1rem 0;
