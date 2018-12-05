@@ -1,20 +1,25 @@
 extends ../layout
 
 block content
-  h1 ${__('Hello')}
+  h1 #{__("Invite with Cage")}
+
+  .internalization
+    a(href="?lang=en") en
+    a(href="?lang=es") es
+    a(href="?lang=ca") ca
 
   form(action=INVITATIONS_URL, method='post')
 
     .form-row
-      label(for="title") Titulo:
+      label(for="title") #{__("Title")}:
       input#title(type="text", name="title", required)
     
     .form-row
-      p Selecciona a tu Nicolas
+      p #{__("Select your Nicolas")}
       .pictures-row
         .picture-field
           label(for="nicolas_01")
-            img(src="pictures/nicolas_princess_01.gif", alt="first picture")
+            img(src="/pictures/nicolas_princess_01.gif", alt=__("Cinderella Nicolas"))
             input#nicolas_01(
               type="radio",
               name='picture',
@@ -24,7 +29,7 @@ block content
 
         .picture-field
           label(for="nicolas_02")
-            img(src="pictures/nicolas_princess_02.gif", alt="first picture")
+            img(src="/pictures/nicolas_princess_02.gif", alt="second picture")
             input#nicolas_02(
               type="radio",
               name='picture',
@@ -34,7 +39,7 @@ block content
 
         .picture-field
           label(for="nicolas_03")
-            img(src="pictures/nicolas_princess_03.gif", alt="first picture")
+            img(src="/pictures/nicolas_princess_03.gif", alt=" picture")
             input#nicolas_03(
               type="radio",
               name='picture',
@@ -43,8 +48,8 @@ block content
             )
       
     .form-row
-      label(for="text") Descripción:
+      label(for="text") #{__("Description")}:
       textarea#text(name="text", rows="3", required)
 
     .actions
-      button(type="submit") Submit
+      button(type="submit") #{__("Create")}

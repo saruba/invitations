@@ -6,6 +6,7 @@ body {
   max-width: 50em;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #566b78;
+  position: relative;
 }
 
 h1,
@@ -38,10 +39,21 @@ input, textarea {
   -webkit-box-sizing:border-box;
   -moz-box-sizing: border-box;
 }
+
 img {
   width: 100%;
 }
 
+.internalization {
+  text-align: right;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.internalization > a{
+  padding: .5rem;
+}
 .pictures-row {
   margin: 0 -.5em;
   text-align: center;

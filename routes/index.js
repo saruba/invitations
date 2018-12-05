@@ -15,7 +15,7 @@ router.get(INVITATIONS_URL, (request, response) => {
     return response.render('invitations/details', {
       title,
       text,
-      picture: `pictures/${picture}`,
+      picture: `/pictures/${picture}`,
     });
   }
   response.render('invitations/new', { INVITATIONS_URL });

@@ -9,14 +9,9 @@ const routes = require('./routes')
 
 const DEFAULT_PORT = 3000;
 const VIEWS_FOLDER = path.join(__dirname, 'views');
+const LOCALES_FOLDER = path.join(__dirname, 'locales')
 const STATIC_FOLDER = path.join(__dirname, 'public');
 const app = express();
-
-i18n.configure({
-  locales:['en', 'es', 'ca'],
-  directory: __dirname + '/locales'
-});
-app.use(i18n.init);
 
 app.set('views', VIEWS_FOLDER);
 app.set('view engine', 'pug')
@@ -24,6 +19,14 @@ app.set('view engine', 'pug')
 app.use(express.static(STATIC_FOLDER));
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+i18n.configure({
+  locales:['en', 'es', 'ca'],
+  defaultLocale: 'en',
+  queryParameter: 'lang',
+  directory: LOCALES_FOLDER,
+});
+app.use(i18n.init);
 
 app.use('/', routes);
 
