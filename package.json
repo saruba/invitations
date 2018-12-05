@@ -4,7 +4,8 @@
   "description": "Create and send invitations directly with the url",
   "main": "app.js",
   "engines": {
-    "node": "11.1.0"
+    "node": "11.1.0",
+    "npm": "6.x"
   },
   "scripts": {
     "start": "node app.js",
