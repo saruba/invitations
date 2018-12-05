@@ -1,6 +1,8 @@
 # Invitations
 
-Small project to test node: Create and send invitations directly with the url
+## Small project to test node
+
+Create and send invitations directly with the url
 
 Install environment
 ```sh
