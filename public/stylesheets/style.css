@@ -4,8 +4,6 @@
 body {
   margin: 0 auto;
   max-width: 50em;
-  /* font-family: "Helvetica", "Arial", sans-serif; */
-  /* color: #555; */
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #566b78;
 }
@@ -30,6 +28,7 @@ label {
 }
 
 input, textarea {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -40,7 +39,7 @@ input, textarea {
   -moz-box-sizing: border-box;
 }
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .pictures-row {
@@ -78,4 +77,23 @@ button {
 
 button:hover {
   background: lightgrey;
+}
+
+/* Invitation */
+
+.invitation {
+  position: relative;
+}
+
+.invitation h1 {
+  text-align: center;
+}
+
+.invitation img {
+  border-radius: 2%;
+}
+
+.invitation p {
+  font-size: 1.2rem;
+  text-align: justify;
 }

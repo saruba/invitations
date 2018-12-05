@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  h1 Invita con Cage
+  h1 ${__('Hello')}
 
   form(action=INVITATIONS_URL, method='post')
 
@@ -10,7 +10,7 @@ block content
       input#title(type="text", name="title", required)
     
     .form-row
-      p Selecciona a tu nicolas
+      p Selecciona a tu Nicolas
       .pictures-row
         .picture-field
           label(for="nicolas_01")
@@ -43,8 +43,8 @@ block content
             )
       
     .form-row
-      label(for="text") Text:
-      textarea#text(name="text", rows="2", required)
+      label(for="text") Descripción:
+      textarea#text(name="text", rows="3", required)
 
     .actions
       button(type="submit") Submit
