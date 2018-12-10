@@ -17,7 +17,7 @@ app.set('views', VIEWS_FOLDER);
 app.set('view engine', 'pug')
 
 app.use(express.static(STATIC_FOLDER));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded());
 
 app.use(logger('dev'));
 
