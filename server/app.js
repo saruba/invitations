@@ -14,10 +14,10 @@ const port = process.env.PORT || DEFAULT_PORT;
 const app = express();
 
 app.set('views', VIEWS_FOLDER);
-app.set('view engine', 'pug')
-
+app.set('view engine', 'pug');
+  
 app.use(express.static(STATIC_FOLDER));
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(logger('dev'));
 
@@ -30,7 +30,5 @@ i18n.configure({
 app.use(i18n.init);
 
 app.use('/', routes);
-
-app.set('port', port);
 
 app.listen(port);
