@@ -4,6 +4,8 @@
 
 Create and send invitations directly with the url
 
+In folder server:
+
 Install environment
 ```sh
 npm install
@@ -15,4 +17,16 @@ npm run dev
 Running server:
 ```sh
 npm start
+```
+
+In folder e2e
+
+Install cypress
+```sh
+npm install
+```
+
+Running cypress:
+```sh
+npm run e2e
 ```
